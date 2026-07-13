@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission Monoroma</title>
+
+<style>
+body{
+margin:0;
+background:#000;
+color:#00ff66;
+font-family:Consolas,monospace;
+padding:30px;
+font-size:18px;
+overflow:hidden;
+}
+
+#terminal{
+white-space:pre-wrap;
+line-height:1.7;
+}
+
+.cursor{
+display:inline-block;
+width:10px;
+background:#00ff66;
+animation:blink .8s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0;}
+}
+
+h1{
+text-align:center;
+color:#00ff66;
+text-shadow:0 0 12px #00ff66;
+}
+
+button{
+display:none;
+margin-top:30px;
+padding:15px 30px;
+background:#00ff66;
+color:black;
+border:none;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#6dff9d;
+}
+</style>
+</head>
+
+<body>
+
+<h1>MISSION : FAREWELL MONOROMA</h1>
+
+<div id="terminal"></div><span class="cursor"></span>
+
+<button id="btn"
+onclick="alert('Mission Complete! 🚀\\nYou'll always be our favourite senior ❤️');">
+COMPLETE MISSION
+</button>
+
+<script>
+
+const lines=[
+
+"> Booting Farewell System 1.0...",
+"",
+"Loading memories ██████████████ 100%",
+"",
+"Scanning Monoroma.exe...",
+"",
+"✔ Kindness Found",
+"✔ Patience Found",
+"✔ Endless Help Found",
+"✔ Meme Sharing Expert Found 😂",
+"",
+"Searching for replacement...",
+"",
+"0 Results Found.",
+"",
+"Error 404 : Replacement Not Found 😎",
+"",
+"Attempting Recovery...",
+"",
+"FAILED.",
+"",
+"Reason:",
+"",
+"Nobody can replace Monoroma 💚",
+"",
+"Running Team Diagnostics...",
+"",
+"👩‍💻 Developers : Sad",
+"🧪 QA Team : Crying",
+"☕ Coffee Machine : Depressed",
+"📅 Calendar : Meetings won't be the same",
+"",
+"Fun Facts",
+"",
+"99% Helpful",
+"1% Crazy 😂",
+"100% Awesome",
+"",
+"sudo cancel-resignation",
+"",
+"Permission Denied 😭",
+"",
+"git commit -m 'Please Don't Leave'",
+"",
+"Commit Failed 💔",
+"",
+"FINAL MESSAGE",
+"",
+"Thank you for making work easier.",
+"Thank you for answering our endless questions.",
+"Thank you for surviving all our random pings 😂",
+"",
+"WARNING",
+"",
+"Your new company has officially stolen one legend from us.",
+"",
+"Achievement Unlocked",
+"",
+"🏆 LEGENDARY TEAMMATE",
+"",
+"Mission Status : SUCCESS 🚀",
+"",
+"Good Luck Monoroma ❤️"
+
+];
+
+let i=0;
+
+function type(){
+
+if(i<lines.length){
+
+document.getElementById("terminal").innerHTML+=lines[i]+"<br>";
+
+i++;
+
+setTimeout(type,120);
+
+}else{
+
+document.getElementById("btn").style.display="inline-block";
+
+}
+
+}
+
+type();
+
+</script>
+
+</body>
+</html>
